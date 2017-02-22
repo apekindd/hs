@@ -1,4 +1,7 @@
 <?php
+/**
+ * PARSE INFO ABOUT CARDS FROM ALLMMORPG
+ */
 if(file_exists($_SERVER['DOCUMENT_ROOT'].'/results/result.ser')){
     die('Файл с результатом уже существует.');
 }

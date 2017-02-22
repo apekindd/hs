@@ -1,4 +1,7 @@
 <?php
+/**
+ * GENERATE LINKS TO ALL CARD AND DOWNLOAD THEM ON CLICK
+ */
 $ser = $_SERVER['DOCUMENT_ROOT']."/results/result.ser";
 $arCards = file_get_contents($ser);
 $arCards = unserialize($arCards);
