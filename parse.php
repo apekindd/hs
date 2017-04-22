@@ -46,7 +46,7 @@ foreach ($out[0] as $k=>$link){
 }
 
 
-$input = $_SERVER['DOCUMENT_ROOT']."/results/result.ser";
+$input = $_SERVER['DOCUMENT_ROOT']."/results/resultNew.ser";
 file_put_contents($input, serialize($arCards));
 
 echo "Спарсено {$i}";

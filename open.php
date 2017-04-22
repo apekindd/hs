@@ -7,7 +7,7 @@ $arCards = file_get_contents($ser);
 $arCards = unserialize($arCards);
 
 
-//echo '<pre>';print_r($arCards); echo '</pre>';
+echo '<pre>';print_r($arCards); echo '</pre>';
 
 /*
 foreach ($arCards as $k=>$arCard){
