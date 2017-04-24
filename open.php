@@ -7,14 +7,14 @@ $arCards = file_get_contents($ser);
 $arCards = unserialize($arCards);
 
 
-echo '<pre>';print_r($arCards); echo '</pre>';
+echo '<pre>';print_r($arCards); echo '</pre>';die();
 
-/*
+
 foreach ($arCards as $k=>$arCard){
     if($arCard['name_en'] == ''){
         //echo '<pre>';print_r($arCards[$k]); echo '</pre>';
 
-        if($arCard['name'] == 'Главарь «Ночных хряков»'){
+       /* if($arCard['name'] == 'Главарь «Ночных хряков»'){
             $arCards[$k]['name_en'] = 'Leatherclad Hogleader';
         }
 
@@ -101,20 +101,21 @@ foreach ($arCards as $k=>$arCard){
 
         if($arCard['name'] == 'Прихвостень «Кабала»'){
             $arCards[$k]['name_en'] = 'Kabal Lackey';
-        }
+        }*/
 
     }
 
 
      //edit name
-    $str = $arCard['name'];
+    $str = $arCard['history'];
     $str = str_replace("\\","",$str);
     $str = preg_replace('#"(.*?)"#', '«$1»', $str);
-    $arCards[$k]['name'] = $str;
+    $arCards[$k]['description'] = $str;
+
+    //echo $arCards[$k]['description'] ."<br/>";
 
    // echo '<pre>';print_r($str); echo '</pre>';
 }
 
 $input = $_SERVER['DOCUMENT_ROOT']."/results/result_en.ser";
 file_put_contents($input, serialize($arCards));
-*/

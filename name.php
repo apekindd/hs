@@ -27,14 +27,13 @@ foreach ($arCards as $k=>$arCard){
 
     $arCards[$k]['name_en'] = $name[1][0];
     sleep(1);
-   // echo '<pre>';print_r($name); echo '</pre>';
     if($i==22){
        break;
     }
     $i++;
 }
 die();
-$input = $_SERVER['DOCUMENT_ROOT']."/results/result_en.ser";
+$input = $_SERVER['DOCUMENT_ROOT']."/results/resultNew.ser";
 file_put_contents($input, serialize($arCards));
 
 echo "$i";

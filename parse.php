@@ -27,6 +27,9 @@ foreach ($out[0] as $k=>$link){
     preg_match_all('#<span class="q2">(.+?)</span>#is',$content,$desc);
     preg_match_all('#<span class="q"><i>(.+?)</i></span>#is',$content,$history);
     preg_match_all("#src='//(.+?).png'>#is",$content,$simple);
+    if($simple == '.png'){
+        preg_match_all("#src='http://(.+?).png'>#is",$content,$simple);
+    }
     preg_match_all("#src='//(.+?).gif'>#is", $content,$golden);
 
     $arCards[$id]['name'] = trim($name[1][0]);

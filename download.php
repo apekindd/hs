@@ -2,7 +2,7 @@
 /**
  * GENERATE LINKS TO ALL CARD AND DOWNLOAD THEM ON CLICK
  */
-$ser = $_SERVER['DOCUMENT_ROOT']."/results/result.ser";
+$ser = $_SERVER['DOCUMENT_ROOT']."/results/resultNew.ser";
 $arCards = file_get_contents($ser);
 $arCards = unserialize($arCards);
 
@@ -12,7 +12,6 @@ foreach ($arCards as $card){
 }
 ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 <button id="png">Скачать PNG</button>
 <button id="gif">Скачать GIF</button>
 
