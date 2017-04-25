@@ -7,7 +7,7 @@ $arCards = file_get_contents($ser);
 $arCards = unserialize($arCards);
 
 
-echo '<pre>';print_r($arCards); echo '</pre>';die();
+echo '<pre>';print_r(count($arCards)); echo '</pre>';die();
 
 
 foreach ($arCards as $k=>$arCard){
@@ -107,10 +107,10 @@ foreach ($arCards as $k=>$arCard){
 
 
      //edit name
-    $str = $arCard['history'];
-    $str = str_replace("\\","",$str);
-    $str = preg_replace('#"(.*?)"#', '«$1»', $str);
-    $arCards[$k]['description'] = $str;
+    $str = $arCard['description'];
+    /*$str = str_replace("\\","",$str);
+    $str = preg_replace('#"(.*?)"#', '«$1»', $str);*/
+    $arCards[$k]['description'] = trim(strip_tags($str));
 
     //echo $arCards[$k]['description'] ."<br/>";
 

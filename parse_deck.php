@@ -1,4 +1,7 @@
 <?php
+/**
+ * PARSE DECK FROM hearthstonetopdecks.com IN TEST
+ */
 $deckLink = "http://www.hearthstonetopdecks.com/decks/thijs-curator-anyfin-paladin-february-2017-season-35/";
 $content = file_get_contents($deckLink);
 

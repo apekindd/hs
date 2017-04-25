@@ -2,11 +2,11 @@
 /**
  * PARSE INFO ABOUT CARDS FROM ALLMMORPG
  */
-if(file_exists($_SERVER['DOCUMENT_ROOT'].'/results/result.ser')){
+if(file_exists($_SERVER['DOCUMENT_ROOT'].'/results/result_2.ser')){
     die('Файл с результатом уже существует.');
 }
 
-$allCardsPage = $_SERVER['DOCUMENT_ROOT'].'/data/cards/cards.html';
+$allCardsPage = $_SERVER['DOCUMENT_ROOT'].'/data/basic/cards.html';
 $allCardsPageContent = file_get_contents($allCardsPage);
 preg_match_all("/http\:\/\/www\.allmmorpg\.ru\/card\/\?id\=(.*?)\"/",$allCardsPageContent,$out);
 //$out[0] - links | $out[1] - ids
